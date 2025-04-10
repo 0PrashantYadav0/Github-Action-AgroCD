@@ -131,7 +131,7 @@ Note: you need to change the name of your image, according to your dockerhub use
 1. Create a directory inside your project.
 
     ```bash
-    mkdir -p .github/Workflows
+    mkdir -p .github/workflows
     ```
 
 2. Create your first pipeline for TEST and BUILD the image. make sure it should be yaml file
