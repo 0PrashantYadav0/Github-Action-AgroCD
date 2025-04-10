@@ -343,16 +343,6 @@ Note: You can setup Argo CD in any cluster, instructions are same.
 
 ---
 
-Setup our Continous deployment.
-
-- Select New App.
-
-![alt text](imgs/setting1.png)
-
-![alt text](imgs/setting2.png)
-
----
-
 - Syncing your manifests files:
 
 ![alt text](imgs/sync.png)
