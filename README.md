@@ -397,3 +397,7 @@ Output
 Application running on http://172.29.213.129:30008
 
 ![alt text](imgs/application.png)
+
+## Acknowledgement:
+
+I create this project using the docs present in github repo [Flask-App-GitHub-Actions-ArgoCD](https://github.com/infosecsingh/Flask-App-GitHub-Actions-ArgoCD). If you want youtube tutorial, we can visit [Inderjeet Singh](https://youtu.be/XTxH3xrb9Js?si=_73HtXzKMQFIyuW2) youtube channel.
