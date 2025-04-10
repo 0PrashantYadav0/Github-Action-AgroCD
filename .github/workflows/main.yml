@@ -72,4 +72,4 @@ jobs:
           git add deploy/deploy.yaml
           git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
           git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/0PrashantYadav0/Github-Action-AgroCD.git
-          git push origin master
+          git push origin main
