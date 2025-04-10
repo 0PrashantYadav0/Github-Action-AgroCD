@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: 0prashantyadav0/agrocd-demo:0.1
+        image: 0prashantyadav0/agrocd-demo:v20250410125008
         ports:
         - containerPort: 8000
