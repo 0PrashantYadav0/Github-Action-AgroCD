@@ -3,7 +3,7 @@ name: Test and Build
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - '**/*'
 
@@ -57,3 +57,19 @@ jobs:
         run: |
           docker push 0prashantyadav0/agrocd-demo:${{ env.VERSION }}
       
+      # UPdate the K8s Manifest Files
+      - name: Update K8s Manifests
+        run: |
+          cat deploy/deploy.yaml
+          sed -i "s|image: 0prashantyadav0/agrocd-demo:.*|image: 0prashantyadav0/agrocd-demo:${{ env.VERSION }}|g" deploy/deploy.yaml
+          cat deploy/deploy.yaml
+
+      # Update Github
+      - name: Commit the changes
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name "GitHub Actions Bot"
+          git add deploy/deploy.yaml
+          git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
+          git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/0PrashantYadav0/Github-Action-AgroCD.git
+          git push origin master
